@@ -14,10 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
-<<<<<<< HEAD
-=======
 
->>>>>>> 7511736140a1f114f3ed72525b3258ee147f5085
  Route::resource('posts', 'PostController');
 
  if (env('APP_ENV') === 'local') {
