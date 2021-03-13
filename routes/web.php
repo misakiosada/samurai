@@ -16,9 +16,7 @@ Route::get('/', function () {
 });
 
  Route::resource('posts', 'PostController@index');
-
  Route::resource("/posts/{{ $post->id }}", 'PostController@show');
- 
  Route::resource("/posts/{{ $post->id }}"/edit, 'PostController@edit');
  
  
