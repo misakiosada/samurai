@@ -15,8 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
- Route::resource('posts', 'PostController');
+ Route::resource('posts', 'PostController@index');
 
+ Route::resource("/posts/{{ $post->id }}", 'PostController@show');
+ 
+ Route::resource("/posts/{{ $post->id }}"/edit, 'PostController@edit');
+ 
+ 
  if (env('APP_ENV') === 'local') {
     URL::forceScheme('https');
  } 
